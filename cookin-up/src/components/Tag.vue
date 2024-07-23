@@ -34,10 +34,4 @@ export default {
         font-weight: 700;
     }
 
-    .tag:hover{
-        color: var(--creme, #fffaf3);
-        background: var(--coral, #f0633c);
-        font-weight: 700;
-    }
-
 </style>
