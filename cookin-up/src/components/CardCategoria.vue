@@ -1,8 +1,10 @@
 <script lang="ts">
 import { PropType } from 'vue'
 import type ICategoria from '../interfaces/ICategoria'
+import Tag from './Tag.vue'
 
 export default {
+  components: { Tag },
         props:{
             categoria : {type: Object as PropType<ICategoria> , required: true}
         }
@@ -12,15 +14,22 @@ export default {
 
 <template>
     <article class="categoria">
-        <header class="categoria__cabecalho">
-            <img :src="`/imagens/icones/categorias_ingredientes/${categoria.imagem}`" class="categoria__imagem" alt="">
-        </header>
+      <header class="categoria__cabecalho">
+        <img :src="`/imagens/icones/categorias_ingredientes/${categoria.imagem}`" :alt="`Ícone de ${categoria.nome}`" class="categoria__imagem">
+  
+        <h2 class="paragrafo-lg categoria__nome">{{ categoria.nome }}</h2>
+      </header>
+  
+      <ul class="categoria__ingredientes">
+        <li v-for="ingrediente in categoria.ingredientes" :key="ingrediente">
+          {{ ingrediente }}
+        </li>
+      </ul>
     </article>
-</template>
+  </template>
 
-
-<style scoped>
-.categoria {
+  <style scoped>
+  .categoria {
     width: 19.5rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -57,4 +66,4 @@ export default {
     gap: 0.5rem;
     flex-wrap: wrap;
   }
-</style>
+  </style>
