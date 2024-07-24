@@ -6,10 +6,15 @@ import Tag from './Tag.vue'
 
 
     export default {
-        components: { SelecionarIngredientes, Tag, SuaLista },
         data(){
             return {
-                ingredientes: ['Alho', 'Manteiga', 'Oregano']
+                ingredientes: [] as string[]
+            }
+        },
+        components: { SelecionarIngredientes, Tag, SuaLista },
+        methods:{
+            adicionarIngredientes(ingredientes : string){
+                this.ingredientes.push(ingredientes);
             }
         }
 
@@ -20,7 +25,8 @@ import Tag from './Tag.vue'
   <main class="conteudo-principal">
     <SuaLista :ingredientes="ingredientes"/>
 
-    <SelecionarIngredientes/>
+    <SelecionarIngredientes @adicionar-ingrediente="adicionarIngredientes"
+    />
   </main>
 </template>
 
