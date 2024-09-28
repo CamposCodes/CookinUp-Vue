@@ -2,10 +2,7 @@
 import SelecionarIngredientes from './SelecionarIngredientes.vue'
 import SuaLista from './SuaLista.vue'
 import Tag from './Tag.vue'
-
-
-
-    export default {
+export default {
         data(){
             return {
                 ingredientes: [] as string[]
@@ -15,6 +12,9 @@ import Tag from './Tag.vue'
         methods:{
             adicionarIngredientes(ingredientes : string){
                 this.ingredientes.push(ingredientes);
+            },
+            removerIngredientes(){
+                this.ingredientes.pop();
             }
         }
 
@@ -24,8 +24,8 @@ import Tag from './Tag.vue'
 <template>
   <main class="conteudo-principal">
     <SuaLista :ingredientes="ingredientes"/>
-
-    <SelecionarIngredientes @adicionar-ingrediente="adicionarIngredientes"
+    <SelecionarIngredientes @adicionar-ingrediente="adicionarIngredientes"  
+    @remover-ingrediente="removerIngredientes" 
     />
   </main>
 </template>
