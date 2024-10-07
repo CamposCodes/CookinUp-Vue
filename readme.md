@@ -1,1 +1,1 @@
-# CookinUp
+# CookinUp - VUE.js 3
