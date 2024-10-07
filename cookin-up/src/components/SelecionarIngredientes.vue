@@ -5,6 +5,7 @@
     import type ICategoria from "../interfaces/ICategoria";
 
     export default {
+        name: "SelecionarIngredientes",
         data() {
             return {
                 categorias: [] as ICategoria[],

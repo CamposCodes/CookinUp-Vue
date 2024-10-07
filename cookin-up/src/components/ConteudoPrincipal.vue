@@ -33,13 +33,21 @@
 <template>
     <main class="conteudo-principal">
         <SuaLista :ingredientes="ingredientes" />
-        <SelecionarIngredientes
-            v-if="conteudo === 'SelecionarIngredientes'"
-            @adicionar-ingrediente="adicionarIngredientes"
-            @remover-ingrediente="removerIngredientes"
-            @buscar-receitas="navegar('MostrarReceita')"
-        />
-        <MostrarReceitas v-else-if="conteudo === MostrarReceitas" />
+        <!-- KEEPALIVE : preserva estado dos componentes que estao dentro da tag (joga
+        estado dos componmenets em cache) -->
+        <KeepAlive include="SelecionarIngredientes">
+            <SelecionarIngredientes
+                v-if="conteudo === 'SelecionarIngredientes'"
+                @adicionar-ingrediente="adicionarIngredientes"
+                @remover-ingrediente="removerIngredientes"
+                @buscar-receitas="navegar('MostrarReceitas')"
+            />
+            <MostrarReceitas
+                :ingredientes="ingredientes"
+                v-else-if="conteudo === 'MostrarReceitas'"
+                @editar-receitas="navegar('SelecionarIngredientes')"
+            />
+        </KeepAlive>
     </main>
 </template>
 
