@@ -179,3 +179,4 @@ Gabriel Campos Lima Alves ([@CamposCodes](https://github.com/CamposCodes))
 > Dica: adicione um link de deploy assim que disponível e considere inserir um
 > GIF curto de uso. Se quiser, posso automatizar badges de cobertura ou pipeline
 > posteriormente.
+
