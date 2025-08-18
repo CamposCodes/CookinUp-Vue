@@ -4,6 +4,9 @@
 
 <h1 align="center">CookinUp</h1>
 <p align="center">Selecione ingredientes. Descubra receitas. Cozinhe com o que você já tem.</p>
+<p align="center">
+    <a href="https://cookin-up-vue-psi.vercel.app" target="_blank"><img src="https://img.shields.io/badge/ACESSAR%20APP-Online-00c853?style=for-the-badge&logo=vercel&logoColor=white" alt="Acessar aplicação" /></a>
+</p>
 
 <div align="center">
     <img alt="Status" src="https://img.shields.io/badge/status-active-success.svg" />
