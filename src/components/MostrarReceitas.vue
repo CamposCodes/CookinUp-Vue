@@ -18,12 +18,36 @@ import { itensDeListaEstaoEmLista2 } from "@/operações/listas";
         async created() {
             const receitas = await obterReceitas();
 
+            // Normalização para comparar strings com/sem acentos, espaços e caixa
+            const normalizar = (s: string) =>
+                s
+                    .normalize("NFD")
+                    .replace(/\p{Diacritic}/gu, "")
+                    .trim()
+                    .toLowerCase();
+
+            // Ingredientes considerados "básicos" que não precisam ser selecionados (ajuste se quiser)
+            const BASICOS = ["sal", "pimenta do reino", "agua", "água", "pimenta", "oleo", "óleo"];
+
+            const selecionadosNorm = this.ingredientes.map(normalizar);
+
             this.receitasEncontradas = receitas.filter((receita) => {
-                const possofazerReceita = itensDeListaEstaoEmLista2(
-                    receita.ingredientes,
-                    this.ingredientes
+                const receitaNorm = receita.ingredientes.map(normalizar);
+
+                // Remove básicos da verificação de cobertura (a receita pode tê-los mesmo se não selecionados)
+                const receitaFiltrada = receitaNorm.filter(
+                    (ing) => !BASICOS.includes(ing)
                 );
-                return possofazerReceita;
+
+                // Se nenhum ingrediente foi selecionado, não retorna nada (evita listar tudo em branco)
+                if (!selecionadosNorm.length) return false;
+
+                // Regra desejada: TODA seleção deve estar contida na receita (receita pode ter mais coisas)
+                const contemSelecaoCompleta = selecionadosNorm.every((sel) =>
+                    receitaFiltrada.includes(sel)
+                );
+
+                return contemSelecaoCompleta;
             });
         },
         components: { BotaoPrincipal, CardReceita },
