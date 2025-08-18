@@ -42,7 +42,7 @@
 
 👉 **Produção:** https://cookin-up-vue-psi.vercel.app
 
-*(Se o link não abrir diretamente, copie e cole no navegador.)*
+_(Se o link não abrir diretamente, copie e cole no navegador.)_
 
 CookinUp é uma aplicação web que ajuda o usuário a descobrir receitas a partir
 dos ingredientes que ele já tem em casa. Basta selecionar ingredientes por
@@ -189,4 +189,3 @@ Gabriel Campos Lima Alves ([@CamposCodes](https://github.com/CamposCodes))
 > Dica: adicione um link de deploy assim que disponível e considere inserir um
 > GIF curto de uso. Se quiser, posso automatizar badges de cobertura ou pipeline
 > posteriormente.
-
