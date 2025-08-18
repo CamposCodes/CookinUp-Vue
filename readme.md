@@ -5,14 +5,17 @@
 <h1 align="center">CookinUp</h1>
 <p align="center">Selecione ingredientes. Descubra receitas. Cozinhe com o que você já tem.</p>
 
+<p align="center">
+    <a href="https://cookin-up-vue-psi.vercel.app" target="_blank"><img src="https://img.shields.io/badge/ACESSAR%20APP-Online-00c853?style=for-the-badge&logo=vercel&logoColor=white" alt="Acessar aplicação" /></a>
+</p>
+
 <div align="center">
     <img alt="Status" src="https://img.shields.io/badge/status-active-success.svg" />
     <img alt="Vue" src="https://img.shields.io/badge/Vue-3-42b883?logo=vue.js&logoColor=white" />
     <img alt="Vite" src="https://img.shields.io/badge/Vite-4-646CFF?logo=vite&logoColor=white" />
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white" />
     <img alt="License" src="https://img.shields.io/badge/license-MIT-informational" />
-    <!-- Se houver deploy prod descomente e ajuste URL -->
-    <!-- <a href="https://SEU-DEPLOY.vercel.app" target="_blank"><img alt="Deploy" src="https://img.shields.io/badge/deploy-Vercel-000?logo=vercel" /></a> -->
+    <a href="https://cookin-up-vue-psi.vercel.app" target="_blank"><img alt="Deploy" src="https://img.shields.io/badge/deploy-Vercel-000?logo=vercel" /></a>
 </div>
 
 ---
@@ -20,6 +23,7 @@
 ## 📌 Sumário
 
 -   [Visão Geral](#visao-geral)
+    -   [Acesse Agora](#acesso)
 -   [Demonstração](#demo)
 -   [Funcionalidades](#funcionalidades)
 -   [Como Funciona o Filtro](#filtro)
@@ -33,6 +37,12 @@
 -   [Autor](#autor)
 
 ## 🍳 Visão Geral <a id="visao-geral"></a>
+
+### 🔥 Acesse Agora <a id="acesso"></a>
+
+👉 **Produção:** https://cookin-up-vue-psi.vercel.app
+
+*(Se o link não abrir diretamente, copie e cole no navegador.)*
 
 CookinUp é uma aplicação web que ajuda o usuário a descobrir receitas a partir
 dos ingredientes que ele já tem em casa. Basta selecionar ingredientes por
