@@ -1,16 +1,16 @@
 <script lang="ts">
-import { PropType } from 'vue';
+import type { PropType } from 'vue';
 import type ICategoria from '../interfaces/ICategoria'
 import Tag from './Tag.vue'
 import IngredienteSelecionavel from './IngredienteSelecionavel.vue'
 
 export default {
-        props:{
-            categoria : {type: Object as PropType<ICategoria> , required: true}
-        },
-        components: { Tag, IngredienteSelecionavel },
-        emits: ['adicionarIngrediente','removerIngrediente']
-    }
+    props:{
+      categoria : {type: Object as PropType<ICategoria> , required: true}
+    },
+    components: { Tag, IngredienteSelecionavel },
+    emits: ['adicionarIngrediente','removerIngrediente']
+  }
 </script>
 
 

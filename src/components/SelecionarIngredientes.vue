@@ -16,8 +16,8 @@
         },
         components: { CardCategoria, BotaoPrincipal },
         emits: [
-            "adicionarIngredientes",
-            "removerIngredientes",
+            "adicionarIngrediente",
+            "removerIngrediente",
             "buscarReceitas",
         ],
     };

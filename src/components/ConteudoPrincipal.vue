@@ -15,8 +15,8 @@
         },
         components: { SelecionarIngredientes, Tag, SuaLista, MostrarReceitas },
         methods: {
-            adicionarIngredientes(ingredientes: string) {
-                this.ingredientes.push(ingredientes);
+            adicionarIngredientes(ingrediente: string) {
+                this.ingredientes.push(ingrediente);
             },
             removerIngredientes(ingrediente: string) {
                 this.ingredientes = this.ingredientes.filter(

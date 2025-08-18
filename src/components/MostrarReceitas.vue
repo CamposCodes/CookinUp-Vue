@@ -8,7 +8,7 @@ import { itensDeListaEstaoEmLista2 } from "@/operações/listas";
 
     export default {
         props: {
-            ingredientes: { type: Array as PropType<string>, required: true },
+            ingredientes: { type: Array as PropType<string[]>, required: true },
         },
         data() {
             return {
@@ -59,7 +59,7 @@ import { itensDeListaEstaoEmLista2 } from "@/operações/listas";
             </p>
 
             <img
-                src="../assets/imagens/sem-receitas.png"
+                src="@/assets/images/sem-receitas.png"
                 alt="Desenho de um ovo quebrado. A gema tem um rosto com uma expressão triste."
             />
         </div>
